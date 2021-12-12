@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keresett a Feri</title>
+    <style>
+
+        body {
+            background-image: url(https://wallpapercave.com/wp/wp4676582.jpg);
+            background-repeat: no-repeat;
+        }
+
+        button {
+
+            border-radius: 15px;
+            border: 2px solid black;
+
+            margin: auto;
+            display: block;
+            height: 145px;
+            width: 390px;
+            font-size: 55px;
+        }
+
+        button:hover {
+            background-color: gainsboro;
+        }
+
+        h1 {
+            margin-top: 200px;
+            color: white;
+            font-size: 95px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Keresett a Feri!</h1>
+
+    <button onclick="feri('http://www.keresettaferi.hu/resources/hang.mp3')">Milyen Feri?</button>
+
+
+    <script>
+
+    function feri(url) {
+        new Audio(url).play();
+    }
+
+    </script>
+
+</body>
+</html>
