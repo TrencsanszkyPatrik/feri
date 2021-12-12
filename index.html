@@ -1,55 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="https://img.freepik.com/free-vector/letter-f-initial-icon-logo-template_23987-54.jpg?size=338&ext=jpg">
     <title>Keresett a Feri</title>
     <style>
+      body {
+        background-image: url(https://wallpapercave.com/wp/wp4676582.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
 
-        body {
-            background-image: url(https://wallpapercave.com/wp/wp4676582.jpg);
-            background-repeat: no-repeat;
-            background-size:cover;
-        }
+      input {
+        border-radius: 15px;
+        border: 2px solid black;
+        margin: auto;
+        display: block;
+        height: 135px;
+        width: 480px;
+        font-size: 35px;
+      }
 
-        button {
+      button:hover {
+        background-color: rgb(160, 153, 153);
+      }
 
-            border-radius: 15px;
-            border: 2px solid black;
-            margin: auto;
-            display: block;
-            height: 145px;
-            width: 390px;
-            font-size: 55px;
-        }
+      h1 {
+        margin-bottom: 200px;
+        margin-top: 115px;
+        color: white;
+        font-size: 85px;
+        text-align: center;
+      }
 
-        button:hover {
-            background-color: gainsboro;
-        }
-
-        h1 {
-            margin-top: 115px;
-            color: white;
-            font-size: 95px;
-            text-align: center;
-        }
+      p {
+        text-align: center;
+        font-size: 20px;
+        color: rgb(175, 167, 155);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <h1>Keresett a Feri!</h1>
+
+
+      <input onclick="feri('hang.mp3')" type="button" value="Milyen Feri?" id="feri"></input> 
     
-    <h1>Keresett a Feri!</h1><br><br><br><br><br><br><br><br><br><br>
-
-    <button onclick="feri('hang.mp3')">Milyen Feri?</button>
-
-
+    <p><span id="haha"></span></p>
+    
     <script>
-
-    function feri(url) {
+      function feri(url) {
         new Audio(url).play();
-    }
-
+        document.getElementById("feri").value="Aki a faszát a szádba ve-";
+        document.getElementById("haha").innerHTML = 'Hahahaahahaha!';
+      }
     </script>
-
-</body>
+  </body>
 </html>
